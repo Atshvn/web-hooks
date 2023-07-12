@@ -19,6 +19,15 @@ app.post("/webhook", (req, res) => {
 app.get("/", (req, res) => {
   res.send(a);
 });
+
+app.get(
+  "/zalo_verifierJz2KBgxUD1PlpReTcS0YEs3iWnwCd5X9DZW.html",
+  (req, res) => {
+    res.sendFile(
+      __dirname + "/zalo_verifierJz2KBgxUD1PlpReTcS0YEs3iWnwCd5X9DZW.html"
+    );
+  }
+);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
