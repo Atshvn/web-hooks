@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 
 app.post("/webhook", (req, res) => {
   console.log("Received webhook:", req.body);
+  res.send(req.body);
   res.sendStatus(200);
 });
 app.get("/", (req, res) => {
